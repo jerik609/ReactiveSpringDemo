@@ -27,7 +27,7 @@ public class ProductService2 {
 
         // simulate something happens with each product (otherwise everything would happen too fast and seem non-reactive)
         return Flux.fromArray(productArr)
-                .delayElements(Duration.ofSeconds(3));
+                .delayElements(Duration.ofSeconds(1));
 
         // now we could expose this via a rest controller (standard "non-reactive" spring way)
     }
