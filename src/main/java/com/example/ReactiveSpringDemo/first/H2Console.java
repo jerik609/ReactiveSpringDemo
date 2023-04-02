@@ -1,4 +1,4 @@
-package com.example.ReactiveSpringDemo;
+package com.example.ReactiveSpringDemo.first;
 
 import org.springframework.context.annotation.Profile;
 import org.springframework.context.event.EventListener;

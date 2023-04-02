@@ -1,4 +1,4 @@
-package com.example.ReactiveSpringDemo;
+package com.example.ReactiveSpringDemo.first;
 
 import org.springframework.data.repository.reactive.ReactiveCrudRepository;
 

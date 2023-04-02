@@ -1,4 +1,4 @@
-package com.example.ReactiveSpringDemo;
+package com.example.ReactiveSpringDemo.first;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.MediaType;
@@ -12,7 +12,7 @@ public class ProductResource {
 
     private final ProductService productService;
 
-    @GetMapping(value = "/product", produces = MediaType.TEXT_EVENT_STREAM_VALUE)
+    @GetMapping(value = "/first_product", produces = MediaType.TEXT_EVENT_STREAM_VALUE)
     public Flux<Product> getProduct() {
         return productService.getAllProducts();
     }

@@ -1,6 +1,6 @@
 plugins {
 	java
-	id("org.springframework.boot") version "3.0.4"
+	id("org.springframework.boot") version "3.0.5"
 	id("io.spring.dependency-management") version "1.1.0"
 }
 
@@ -19,14 +19,20 @@ repositories {
 }
 
 dependencies {
+
+	// reactive database connection/driver
 	implementation("org.springframework.boot:spring-boot-starter-data-r2dbc")
+	// reactive web
 	implementation("org.springframework.boot:spring-boot-starter-webflux")
+
 	compileOnly("org.projectlombok:lombok")
 
 	//runtimeOnly("com.h2database:h2")
 	implementation("com.h2database:h2")
 	runtimeOnly("io.r2dbc:r2dbc-h2")
+
 	annotationProcessor("org.projectlombok:lombok")
+
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("io.projectreactor:reactor-test")
 }
