@@ -8,11 +8,11 @@ import java.time.Duration;
 
 @Service
 @RequiredArgsConstructor
-public class ProductService {
+public class ProductService2 {
 
-    private final ProductRepository productRepository;
+    private final ProductRepository2 productRepository;
 
-    public Flux<Product> getAllProducts() {
+    public Flux<Product2> getAllProducts() {
         return productRepository.findAll().delayElements(Duration.ofSeconds(3));
     }
 

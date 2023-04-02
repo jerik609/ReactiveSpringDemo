@@ -8,12 +8,12 @@ import reactor.core.publisher.Flux;
 
 @RestController
 @RequiredArgsConstructor
-public class ProductResource {
+public class ProductResource2 {
 
-    private final ProductService productService;
+    private final ProductService2 productService;
 
     @GetMapping(value = "/first_product", produces = MediaType.TEXT_EVENT_STREAM_VALUE)
-    public Flux<Product> getProduct() {
+    public Flux<Product2> getProduct() {
         return productService.getAllProducts();
     }
 

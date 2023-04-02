@@ -5,7 +5,7 @@ import org.springframework.data.annotation.Id;
 
 @Data
 // no entity annotation, because that's an ORM annotation
-public class Product {
+public class Product2 {
 
     // even this ID is not a JPA ID, it's "data" annotation
     @Id
