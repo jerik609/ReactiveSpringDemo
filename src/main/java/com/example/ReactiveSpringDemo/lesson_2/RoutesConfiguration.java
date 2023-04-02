@@ -35,7 +35,11 @@ public class RoutesConfiguration {
         // - making threads when they are waiting for something
 
         // @Async vs reactive - i.e. what really is spring's @Async? https://www.baeldung.com/spring-mvc-async-vs-webflux
-        // ok, so now only reactive backpressure remains ...
+        // the lecturer says it's not even comparable ^^^
+
+        // ok, so now only reactive backpressure remains out of my open question
+
+        // remember - reactive is NOT better in all circumstances, it depends on the case
 
     }
 
