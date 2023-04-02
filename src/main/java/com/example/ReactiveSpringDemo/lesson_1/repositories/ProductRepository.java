@@ -1,6 +1,6 @@
-package com.example.ReactiveSpringDemo.second.repositories;
+package com.example.ReactiveSpringDemo.lesson_1.repositories;
 
-import com.example.ReactiveSpringDemo.second.model.Product;
+import com.example.ReactiveSpringDemo.lesson_1.model.Product;
 import org.springframework.data.repository.reactive.ReactiveCrudRepository;
 import org.springframework.stereotype.Repository;
 

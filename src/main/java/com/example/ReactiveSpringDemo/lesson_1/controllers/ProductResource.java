@@ -1,7 +1,7 @@
-package com.example.ReactiveSpringDemo.second.controllers;
+package com.example.ReactiveSpringDemo.lesson_1.controllers;
 
-import com.example.ReactiveSpringDemo.second.model.Product;
-import com.example.ReactiveSpringDemo.second.services.ProductService;
+import com.example.ReactiveSpringDemo.lesson_1.model.Product;
+import com.example.ReactiveSpringDemo.lesson_1.services.ProductService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;

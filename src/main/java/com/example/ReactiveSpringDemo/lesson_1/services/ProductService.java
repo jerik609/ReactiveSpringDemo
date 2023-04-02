@@ -1,14 +1,12 @@
-package com.example.ReactiveSpringDemo.second.services;
+package com.example.ReactiveSpringDemo.lesson_1.services;
 
-import com.example.ReactiveSpringDemo.second.model.Product;
-import com.example.ReactiveSpringDemo.second.repositories.ProductRepository;
+import com.example.ReactiveSpringDemo.lesson_1.model.Product;
+import com.example.ReactiveSpringDemo.lesson_1.repositories.ProductRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 
 import java.time.Duration;
-import java.time.temporal.ChronoUnit;
-import java.time.temporal.TemporalUnit;
 
 // reminder - instructs Spring to create a bean of this type in the spring context
 // NOTE: it does not make sense to annotate interfaces with @Service, @Component -
