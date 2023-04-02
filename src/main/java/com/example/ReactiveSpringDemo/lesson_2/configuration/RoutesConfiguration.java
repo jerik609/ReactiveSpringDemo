@@ -1,4 +1,4 @@
-package com.example.ReactiveSpringDemo.lesson_2;
+package com.example.ReactiveSpringDemo.lesson_2.configuration;
 
 import com.example.ReactiveSpringDemo.lesson_1.model.Product;
 import com.example.ReactiveSpringDemo.lesson_2.services.ProductService2;
