@@ -21,7 +21,7 @@ public class ProductService2 {
 
         // imagine these come from a DB
         final var beer = Product.builder().id(1).name("Beer").build();
-        final var chocolate = Product.builder().id(2).name("Beer").build();
+        final var chocolate = Product.builder().id(2).name("Chocolate").build();
         final var apple = Product.builder().id(3).name("Apple").build();
         final var productArr = new Product[]{beer, chocolate, apple};
 

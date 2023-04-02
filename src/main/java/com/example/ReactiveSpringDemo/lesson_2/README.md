@@ -20,3 +20,8 @@ The standard controller way is ok, but the reactive way is more functional. None
 
 ## Reactive backpressure 
 ok, so now only reactive backpressure remains out of my open question
+
+## Logic location
+- handler - responsible for handling requests and building responses
+- service - responsible for preparing data (but not presenting it)
+- configuration-routes - handles routing, but not the presentation nor production of data
