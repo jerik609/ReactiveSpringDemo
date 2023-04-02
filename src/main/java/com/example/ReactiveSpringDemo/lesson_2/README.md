@@ -21,6 +21,9 @@ The standard controller way is ok, but the reactive way is more functional. None
 ## Reactive backpressure 
 ok, so now only reactive backpressure remains out of my open question
 
+## Routes vs Controller?
+which one is better and when - preference? maybe to decouple from MVC completely - cleanness
+
 ## Logic location
 - handler - responsible for handling requests and building responses
 - service - responsible for preparing data (but not presenting it)
