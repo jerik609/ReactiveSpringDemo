@@ -23,7 +23,8 @@ public class ProductService2 {
         final var beer = Product.builder().id(1).name("Beer").build();
         final var chocolate = Product.builder().id(2).name("Chocolate").build();
         final var apple = Product.builder().id(3).name("Apple").build();
-        final var productArr = new Product[]{beer, chocolate, apple};
+        final var nullName = Product.builder().id(999).build();
+        final var productArr = new Product[]{beer, chocolate, apple, nullName};
 
         // simulate something happens with each product (otherwise everything would happen too fast and seem non-reactive)
         return Flux.fromArray(productArr)
