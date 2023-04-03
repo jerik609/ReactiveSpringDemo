@@ -29,6 +29,8 @@ public class ProductService2 {
         return Flux.fromArray(productArr)
                 .delayElements(Duration.ofSeconds(1));
 
+        // BOOK: josh long - reactive spring
+
         // now we could expose this via a rest controller (standard "non-reactive" spring way)
     }
 
