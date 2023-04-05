@@ -80,6 +80,8 @@ public class DemoController {
 
             private Subscription sub;
 
+            // the very first method called on subscription
+            // we get the subscription, and we can use it to request more data
             @Override
             public void onSubscribe(Subscription s) {
                 this.sub = s;
@@ -116,8 +118,12 @@ public class DemoController {
         // backpressure - subscriber asks for the elements at a pace at which it can handle the
         // requests, when it's actually done, it can (will?) ask for more
 
-        final Flux<Integer> fluxx = Flux.just(1, 2, 3, 4, 5)
+        // we can always cancel a subscription, after that, we can no longer request more data
+        // subscription actually has only two methods - request and cancel, that's it
 
+        final Flux<Integer> fluxx = Flux.just(1, 2, 3, 4, 5)
+                .onBackpressureBuffer()
+                .onBackpressureDrop()
 
                 ;
 
