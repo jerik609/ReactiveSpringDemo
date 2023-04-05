@@ -97,10 +97,21 @@ public class DemoController {
             }
         });
 
+        // if a subscriber does not request, he does not receive - that's a big difference
+        // between the good-old streams API and the reactive is, that streams a push, but the
+        // reactive is pull from subscriber
+
+        // we can request multiple elements using the subscriber directly
+
+        // backpressure - subscriber asks for the elements at a pace at which it can handle the
+        // requests, when it's actually done, it can (will?) ask for more
+
         final Flux<Integer> fluxx = Flux.just(1, 2, 3, 4, 5)
 
 
                 ;
+
+
 
 
 
