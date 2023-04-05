@@ -67,7 +67,16 @@ public class DemoController {
         // why? well, the only thing that happens is, that we get a subscription
         // so to actually get some data, we need to use this subscription to
         // pull the data from the publisher
-        Flux.just(1, 2, 3, 4, 5).subscribe(new Subscriber<>() {
+        Flux.just(1, 2, 3, 4, 5)
+                .doOnNext(x -> {
+                    if (x == 3)
+                        throw new RuntimeException("boom!");
+                })
+                .onErrorContinue(
+                        (throwable, o) -> System.out.println("tough luck baby")
+                )
+
+                .subscribe(new Subscriber<>() {
 
             private Subscription sub;
 
@@ -82,12 +91,13 @@ public class DemoController {
             public void onNext(Integer e) {
                 System.out.println("on next: " + e);
                 sub.request(1);
+                // throwing an error here, will of course NOT BE HANDLED by
+                // the subscriber's onError (which is meant for the publisher's errors)
             }
 
             @Override
             public void onError(Throwable t) {
                 System.out.println("on error: " + t);
-                sub.cancel();
             }
 
             @Override
@@ -110,6 +120,7 @@ public class DemoController {
 
 
                 ;
+
 
 
 
